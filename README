@@ -1,0 +1,45 @@
+*******************************************************************************
+THE GEORGE WASHINGTON UNIVERSITY
+CSCI 6555 - Computer Animation
+James R Taylor - jrt@gwu.edu
+*******************************************************************************
+
+Designed, built and tested on Ubuntu 11.04 (Natty Narwhal)
+
+To configure use cmake via cmake-curses-gui version 2.8 or later.
+
+Best used in out of source builds.
+Create a build directory outside the source tree
+Then ccmake to the source directory.
+
+Building:
+	Extract the source to ~/cs6555/jrt/
+	In the ~/cs6555/jrt/ directory 
+		will see a folder named code containing folders[lab0, lab1,...]
+	To build lab2 from the terminal in ~/cs6555/jrt/ directory
+		cd ~/cs6555/jrt/
+		mkdir build
+		cd build
+		mkdir lab4
+		cd lab4
+		ccmake ../../code/lab4
+		make
+
+Executing:
+	The build will create several folders in the build directory
+		Apps : contains the actual lab programs.  
+			To run the submission for lab1 execute 
+				~/cs6555/jrt/build/lab4/Apps/lab4
+		UnitTest : contains testing programs to validate components.  Many examples here.
+		
+		UI: 	p key pauses sim
+			a key tracks camera left
+			d key tracks camera right
+			w key dollys camera in
+			s key dollys camera out
+
+Dependencies:
+	OpenGL	: For rendering support
+	GLUT	: Extensions for OpenGL
+	TIFF	: For screen capture support
+	Eigen3	: For Linear Algebra support
